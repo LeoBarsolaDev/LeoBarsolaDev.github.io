@@ -1,7 +1,7 @@
 // Button Courses
 const courseList = document.getElementById("course-list")
 const collCourse = document.getElementById("collapse-course")
-let courseState = false
+let courseState = true
 
 collCourse.addEventListener("click", () =>{
     if(courseState == true){
