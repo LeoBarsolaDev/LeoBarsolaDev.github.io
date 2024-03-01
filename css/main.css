@@ -1,0 +1,398 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* ==================Common Colors================== */
+    --main: goldenrod;
+    --bg: white;
+    --bg-section: #f5f5f5;
+    --bg-section-snd: #eeeeee;
+    --text-title: #1e1e1e;
+    --text: gray;
+    --shadow: #dedede;
+}
+
+body{
+    background-color: var(--bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    background-color: var(--bg-section);
+    border-radius: 2rem;
+    padding: 2rem 4rem;
+    margin: 2rem;
+    box-shadow: 0.5rem 0.5rem 1rem var(--shadow);
+}
+
+/* ==================HEADER================== */
+header{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "photo title title title title title title title title contact contact contact";
+    padding-bottom: 1rem;
+}
+
+/* PORTRAIT */
+.photo{
+    grid-area: photo;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.photo img{
+    border-radius: 50%;
+    width: 150px;
+    border: 5px var(--main) solid;
+}
+
+/* TITULO */
+.title{
+    grid-area: title;
+    padding-left: 2rem;
+}
+
+.title h1{
+    padding-top: 1rem;
+    color: var(--main);
+    font-size: 40pt;
+    text-transform: uppercase;
+}
+
+.title h2{
+    color: var(--text);
+}
+
+/* CONTACTO */
+.contact{
+    grid-area: contact;
+}
+.contact ul{
+    list-style-type: none;
+    
+}
+
+.contact i{
+    color: var(--main);
+    
+}
+
+.contact li{
+    margin: 1rem 0;
+}
+
+.contact a{
+    text-decoration: none;
+    color: var(--text);
+    font-size: 12pt;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact a:hover{
+    color: var(--text-title);
+    font-size: large;
+    font-weight: bolder;
+}
+
+main hr{
+    margin: 1rem 0;
+}
+
+/* ==================CONTENT================== */
+/* Presentacion */
+.introduction{
+    color: var(--text);
+    font-size: large;
+    line-height: 20pt;
+}
+
+article{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "article article article article article article article article article aside aside aside";
+    grid-gap: 1rem;
+}
+
+/* Article */
+.article{
+    grid-area: article;
+}
+
+.article h3{
+    color: var(--main);
+    font-size: 28pt;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.article h4{
+    font-size: 18pt;
+    padding: 0.5rem 0;
+    color: var(--text-title);
+}
+
+.subtitle{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "type type type type type type type type type time time time";
+    color: var(--text);
+    font-size: large;
+    line-height: 20pt;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.subtitle .type{
+    grid-area: type;
+}
+
+.subtitle .time{
+    grid-area: time;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+article p{
+    color: var(--text);
+    font-size: large;
+    line-height: 20pt;
+}
+
+.ghost-btn{
+    background-color: transparent;
+    border: 5px var(--main) solid;
+    color: var(--main);
+    font-size: 16pt;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    display: flex;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.ghost-btn:hover{
+    background-color: var(--main);
+    color: var(--bg-section);
+    /* font-weight: bolder; */
+}
+
+.ghost-btn:active{
+    background-color: transparent;
+    color: var(--main);
+    border: 3px var(--main) solid;
+    /* font-weight: bolder; */
+}
+
+.course-list{
+    list-style-type: none;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.course-list li{
+    color: var(--text);
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.course-list b{
+    color: var(--text-title)
+}
+section .skill{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+section .label{
+    color: var(--text);
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+section .bar-bg{
+    width: 90%;
+    height: 1.5rem;
+    background-color: transparent;
+    border: 0.2rem var(--main) solid;
+    border-radius: 1.5rem;
+}
+
+.bar{
+    /* grid-area: bar; */
+    /* width: 54%; */
+    background-color: var(--main);
+    height: 110%;
+    border-radius: 0.5rem 1rem 1rem 0.5rem;
+}
+
+.bar-html{
+    width: 80%;
+}
+.bar-css{
+    width: 70%;
+}
+.bar-bs{
+    width: 50%;
+}
+.bar-js{
+    width: 65%;
+}
+.bar-gml{
+    width: 90%;
+}
+
+.bar-python{
+    width: 50%;
+}
+
+.disclaimer{
+    color: var(--text);
+    font-weight: light;
+    font-size: 12pt;
+    text-align: center;
+}
+/* Aside */
+.aside{
+    grid-area: aside;
+}
+
+.aside h3{
+    color: var(--main);
+    text-transform: uppercase;
+    font-size: 24pt;
+}
+
+.aside ul{
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.aside li{
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 16pt;
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    color: var(--text);
+}
+/* ==================TOGGLE SWITCH================== */
+.toggle-cont{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+.toggle{
+    font-size: 32pt;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    color: var(--text);
+}
+
+
+/* ==================MEDIA QUERIES================== */
+/* Tablet */
+
+@media screen and (max-width: 1160px){
+    header{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: "photo title title title title title title title contact contact contact contact";
+    }
+    article{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: "article article article article article article article article aside aside aside aside";
+        grid-gap: 1rem;
+    }
+}
+@media screen and (max-width: 1000px){
+    .photo{
+        display: flex;
+        justify-content: center;
+        align-items: middle;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "photo photo photo photo photo photo"
+                             "title title title title title title"
+                             "contact contact contact contact contact contact";
+    }
+
+    article{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "article article article article article article"
+                             "aside aside aside aside aside aside";
+        grid-gap: 1rem;
+    }
+
+    section .skill{
+        grid-template-columns: 30% 70%;
+    }
+    .subtitle{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "type type type type type type"
+                             "time time time time time time";
+    }
+
+    
+    .subtitle .time{
+        text-align: left;
+    }
+
+
+    .contact{
+        padding-left: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 580px){
+    main{
+        padding: 1rem;
+    }
+    .title h1{
+        font-size: 32pt;
+    }
+    .title h2{
+        font-size: 14pt;
+    }
+    .article h3{
+        font-size: 20pt;
+    }
+    
+    .article h4{
+        font-size: 12pt;
+    }
+
+    .ghost-btn{
+        padding: 0.4rem 1rem;
+        font-size: 12pt;
+        border: 2px var(--main) solid;
+        margin-top: 0.5rem;
+    }
+
+    .course-list li{
+        font-size: 10pt;
+    }
+
+    section .skill{
+        grid-template-columns: 100%;
+    }
+
+    .skill .label{
+        text-align: center;
+    }
+}
